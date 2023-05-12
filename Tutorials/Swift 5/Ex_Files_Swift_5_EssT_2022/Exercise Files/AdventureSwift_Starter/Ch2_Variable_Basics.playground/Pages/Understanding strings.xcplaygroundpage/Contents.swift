@@ -14,10 +14,14 @@
  
  */
 // Declaring strings
-
-
+var activeQuest: String = "Retrieving something"
+print(activeQuest)
 // Concatenation
+var questDificculty = "Nightmare"
+var questInfo = activeQuest + "->" + questDificculty
 
+questInfo += "!"
 
 // String interpolation
+let questInfo_Interpolated = "I'm not sure for \(activeQuest)."
 
