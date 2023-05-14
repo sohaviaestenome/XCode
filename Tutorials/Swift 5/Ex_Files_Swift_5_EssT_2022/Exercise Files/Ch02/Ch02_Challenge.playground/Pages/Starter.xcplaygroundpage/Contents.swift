@@ -29,6 +29,6 @@ var debugStats:String = "Your name is \(characterName), your weapon is a big pil
 var questAccepted:Bool = true
 var canQuest:Bool = true
 // 7
-var questStatus:Bool = questAccepted && canQuest
+var questStatus = questAccepted && canQuest
 // 8
-print(debugStats + "Your quest status is: " + String(questStatus))
+print(debugStats.append(contentsOf: "Your quest status is: \(questStatus)"))
