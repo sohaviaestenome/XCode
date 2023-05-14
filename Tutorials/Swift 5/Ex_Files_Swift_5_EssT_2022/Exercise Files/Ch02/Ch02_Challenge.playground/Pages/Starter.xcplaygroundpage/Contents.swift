@@ -15,17 +15,20 @@
  
  */
 // 1
-
+var characterName = "Xerife"
+var weaponClassification = "Porcaria"
 // 2
-
+characterName +=  "Nelvis"
 // 3
-
+var currentMana: Double = 12.3
 // 4
-
+var manaPercentage = String(currentMana / 100)
 // 5
-
+var debugStats:String = "Your name is \(characterName), your weapon is a big pile of \(weaponClassification).\n You have \(currentMana) mana and it makes up \(manaPercentage)."
 // 6
-
+var questAccepted:Bool = true
+var canQuest:Bool = true
 // 7
-
+var questStatus:Bool = questAccepted && canQuest
 // 8
+print(debugStats + "Your quest status is: " + String(questStatus))
