@@ -24,7 +24,7 @@ shopItemsArray.insert("rabanetes", at: 1)
 // 4
 var selectedItem = shopItemsArray[0]
 // 5
-var selectedItemPrice = shopItemsArray[0]
+var selectedItemPrice = shopItemsDictionary[selectedItem]
 // 6
 var fullArmorSet: Set = ["colete", "armadura", "botas"]
 var currentArmorSet: Set = ["colete", "armadura"]
