@@ -15,18 +15,23 @@
  
  */
 // 1
-
+var shopItemsArray: [String] = ["bananas", "cebolas"]
+var shopItemsDictionary: [String: Double] = ["bananas": 1.23, "cebolas": 1.24]
 // 2
-
+shopItemsArray.contains("rabanetes")
 // 3
-
+shopItemsArray.insert("rabanetes", at: 1)
 // 4
-
+var selectedItem = shopItemsArray[0]
 // 5
-
+var selectedItemPrice = shopItemsArray[0]
 // 6
+var fullArmorSet: Set = ["colete", "armadura", "botas"]
+var currentArmorSet: Set = ["colete", "armadura"]
 
 // 7
+fullArmorSet.subtract(currentArmorSet)
 
 // 8
-
+var armorPieceTuple = (name: "colete", cost: 2, canEquip: true)
+armorPieceTuple.name
