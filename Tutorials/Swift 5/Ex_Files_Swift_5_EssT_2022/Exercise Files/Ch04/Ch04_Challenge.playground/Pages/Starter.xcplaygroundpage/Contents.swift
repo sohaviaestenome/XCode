@@ -16,13 +16,36 @@
  
  */
 // 1
-
+var leftHandWeapon: String? = "mace"
+var rightHandWeapon: String? = "sword"
 // 2
-
+if let leftHandWeapon = leftHandWeapon, let rightHandWeapon = rightHandWeapon {
+    print("you got them buddy \(leftHandWeapon) \(rightHandWeapon)")
+}else {
+    print("no can do kimosabe")
+}
 // 3
-
+var playerExp: [String: Int] = ["Pedro": 100, "Bob": 88, "Noobzilla": 0]
 // 4
-
+for (player, exp) in playerExp {
+    print("\(player) : \(exp)")
+}
 // 5
-
+for (player, exp) in playerExp {
+    guard exp>1 else{
+        print("\(player) < 1 can't go buddy")
+        continue
+    }
+    switch exp{
+    case 32:
+        print("meh")
+    case(200...500):
+        print("ai caramba!!!")
+    case (let localExp) where localExp > 500:
+        print("olé!!")
+    default:
+        print("no data")
+    }
+}
 // 6
+
