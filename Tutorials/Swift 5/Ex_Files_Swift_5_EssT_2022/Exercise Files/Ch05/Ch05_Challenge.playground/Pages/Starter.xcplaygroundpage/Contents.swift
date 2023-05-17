@@ -15,16 +15,33 @@
  
  */
 // 1
+typealias Attack = (name:String, value: Int)
 
 // 2
-
+func attackEnemy(value: Int) {
+    print("attack value with \(value) firepower")
+}
 // 3
-
+func attackEnemy(attackType: Attack) -> String {
+    print("attack value with \(attackType) firepower")
+    return "\(attackType.name): \(attackType.value)"
+}
 // 4
-
+attackEnemy(value: 12)
+attackEnemy(attackType: ("Fireball", 20))
 // 5
-
+typealias AttackClosure = ([Attack]) -> Void
+var testArray = [
+    ("Fireball", 20),
+    ("IceSpike", 22)
+]
 // 6
-
+func fetchPlayerAttacks(closure: AttackClosure) {
+    closure(testArray)
+}
 // 7
-
+fetchPlayerAttacks { (attackOptions) in
+    for (name, value) in attackOptions {
+        print("\(name) will hit for \(value) if cast...")
+    }
+}
