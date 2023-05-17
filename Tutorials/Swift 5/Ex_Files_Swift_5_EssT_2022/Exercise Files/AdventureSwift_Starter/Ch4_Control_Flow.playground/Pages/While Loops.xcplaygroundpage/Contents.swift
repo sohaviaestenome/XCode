@@ -14,6 +14,15 @@
 
  */
 // While loop
+var playerHealth  = 5
 
+//while playerHealth > 0 {
+//    playerHealth -= 1
+//    print("Still kicking")
+//}
 // Repeat-while loop
+repeat {
+    playerHealth -= 1
+    print(playerHealth)
+} while playerHealth > 0
 
