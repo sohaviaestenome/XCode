@@ -15,6 +15,26 @@
  
  */
 // Declaring an enum
+enum GameState {
+    case Completed
+    case Initializing
+    case LoadingData
+    case Restarting
+}
 
+// enum GameState { case Completed, Initalizing, LoadingData}
 
 // Storing and switching on an enum value
+var currentState = GameState.Completed
+print("current state is \(currentState)")
+
+switch currentState {
+case .Completed:
+    print("completed all taks")
+case .Initializing:
+    print("just starting man")
+case .LoadingData:
+    print("loading data, wait a while")
+@unknown default:
+    print("unkown game state detected")
+}
