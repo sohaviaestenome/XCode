@@ -22,7 +22,20 @@ protocol Collectable {
     init(withName: String, startingPrice: Int)
     func collect() -> Bool
 }
-
+extension Collectable {
+    var priceIncrease: Int {
+        return self.price * 10
+    }
+    
+    init(name: String) {
+        self.init(withName: name, startingPrice: 100)
+    }
+    
+    func collect() -> Bool {
+        print("Default item couldn't be collected")
+        return false
+    }
+}
 protocol Usable {
     func use()
 }
@@ -42,11 +55,19 @@ class Item: Collectable, Usable {
         self.price = startingPrice
     }
     
-    func collect() -> Bool {
-        print("Item collected!")
-        return true
+//    func collect() -> Bool {
+//        print("Item collected!")
+//        return true
+//    }
+}
+
+extension String {
+    func fancyDebug() {
+        print("This string has \(self.count) characters")
     }
 }
 
 let potion = Item(withName: "Good one", startingPrice: 33)
 potion.use()
+potion.collect()
+potion.name.fancyDebug()
