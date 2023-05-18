@@ -15,15 +15,36 @@
  
  */
 // 1
-
-// 2
-
-// 3
-
-// 4
-
-// 5
+enum ActionError: Error {
+    case InsufficientMP
+    case OutOfRange
+    case UnknownError
+}
+// 2 -3 -4 -5
+func attackEnemy(mp: Int, distance: Double) throws -> Bool? {
+    guard mp > 10 else {
+        throw ActionError.InsufficientMP
+    }
+    
+    guard distance < 5.89 else {
+        throw ActionError.OutOfRange
+    }
+    
+    return true
+}
 
 // 6
-
+do {
+    try attackEnemy(mp: 2, distance: 12.3)
+    print("attack landed")
+}catch ActionError.InsufficientMP{
+    print("qq coisa")
+}catch ActionError.OutOfRange{
+    print("outra erro")
+} catch ActionError.UnknownError{
+    print("error desconhecido")
+}
 // 7
+if let errorUnwrapping = try? attackEnemy(mp: 12, distance: 13) {
+    print("ajsknfndaskjfasd")
+}
