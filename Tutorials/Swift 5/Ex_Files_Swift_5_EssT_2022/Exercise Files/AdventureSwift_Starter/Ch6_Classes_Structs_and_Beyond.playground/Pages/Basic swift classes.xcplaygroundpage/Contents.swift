@@ -15,4 +15,33 @@
  
  */
 // Declaring a new class
+class Adventurer {
+    var name: String
+    var maxHealth: Int
+    
+    var specialMove: String?
+    
+    init(name: String, maxHP: Int) {
+        self.name = name
+        self.maxHealth = maxHP
+    }
+    
+    convenience init(name: String) {
+        self.init(name:name, maxHP: 100)
+    }
+    
+    func prinStats() {
+        print("Character: \(self.name), Max Health: \(self.maxHealth)")
+    }
+}
 
+var player1 = Adventurer(name: "Harrison", maxHP: 99)
+var player2 = Adventurer(name: "Manel")
+
+var defaultPlayer = player1
+defaultPlayer.name = "Bobby"
+print(player1.name)
+player1.name = "Zeca"
+
+player1.prinStats()
+player2.prinStats()
