@@ -19,6 +19,10 @@ struct Item {
 
 struct Owner {
     var name: String
+    
+    func returnOwnerInfo() -> String {
+        return "\(name) is current item's owner."
+    }
 }
 
 var questDirectory = [
@@ -33,4 +37,23 @@ var questDirectory = [
 ]
 
 // Creating the chain
+var rareDagger = Item(description: "A unique Dagger", previousOwner: nil)
+var daggerOwner = Owner(name: "The great thief")
+rareDagger.previousOwner = daggerOwner
+rareDagger.previousOwner?.name = "Bandido da moita"
 
+if let owner = rareDagger.previousOwner?.name {
+    print("This item's previous owner was: \(owner)")
+} else {
+    print("previous owner unknown")
+}
+
+if let ownerInfo = rareDagger.previousOwner?.returnOwnerInfo(){
+    print("Owner found")
+} else {
+    print("No owner in records...")
+}
+
+if let gemstoneObjective = questDirectory["FetchGemstones"]?["Objective"] {
+    print(gemstoneObjective)
+}
