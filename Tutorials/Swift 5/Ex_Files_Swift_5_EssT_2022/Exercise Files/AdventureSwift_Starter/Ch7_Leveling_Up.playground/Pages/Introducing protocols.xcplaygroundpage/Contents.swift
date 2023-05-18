@@ -15,7 +15,29 @@
 
  */
 // Declare a protocol
-
+protocol Collectable {
+    var name: String { get }
+    var price: Int {get set }
+    
+    init(withName: String, startingPrice: Int)
+    func collect() -> Bool
+}
 
 // Protocol adoption
+class Item: Collectable {
+    var name: String
+    
+    var price: Int
+    
+    required init(withName: String, startingPrice: Int) {
+        self.name = withName
+        self.price = startingPrice
+    }
+    
+    func collect() -> Bool {
+        print("Item collected!")
+        return true
+    }
+}
 
+let potion = Item(withName: "Good one", startingPrice: 33)
