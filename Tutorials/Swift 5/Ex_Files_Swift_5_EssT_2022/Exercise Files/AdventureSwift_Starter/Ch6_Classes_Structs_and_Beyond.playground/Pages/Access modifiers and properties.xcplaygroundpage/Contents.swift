@@ -22,9 +22,31 @@ class Adventurer {
     var specialMove: String?
     let maxHealth: Int
     
+    var healthLost: Int {
+        return maxHealth - health
+    }
+    
+    static var maxActivePlayers = 10
+    
+    fileprivate var health: Int
+    
+    class var credo: String {
+        return "Defend the helpless!"
+    }
+    
+    var Health: Int {
+        get {return health}
+        set {
+            if(newValue <= 100) {
+                health = newValue
+            }
+        }
+    }
+    
     init(name: String, maxHP: Int) {
         self.name = name
         self.maxHealth = maxHP
+        self.health = maxHP
     }
     
     convenience init(name: String) {
@@ -38,6 +60,9 @@ class Adventurer {
 
 var player1 = Adventurer(name: "Harrison", maxHP: 99)
 var player2 = Adventurer(name: "Steven")
+
+Adventurer.maxActivePlayers
+Adventurer.credo
 
 player1.printStats()
 player2.printStats()
