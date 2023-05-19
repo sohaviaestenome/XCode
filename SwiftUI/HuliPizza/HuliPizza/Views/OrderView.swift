@@ -27,6 +27,8 @@ struct OrderView: View {
             ScrollView{
                 ForEach(orders, id:\.self) {order in
                     OrderRowView(order: order)
+                        .padding(.bottom, 5)
+                        .padding([.leading,.trailing],7)
                 }
             }
         }
