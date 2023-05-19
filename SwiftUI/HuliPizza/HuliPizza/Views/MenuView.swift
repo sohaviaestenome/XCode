@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct MenuView: View {
+    var menu:[MenuItem]
     var body: some View {
-        ScrollView{
-            ForEach(1...25, id:\.self) {item in
-                MenuRowView(item: item)
+        List(MenuCategory.allCases, id:\.self){ category in
+            Section {
+                ForEach(menu.filter({$0.category == category})) {item in
+                    MenuRowView(item: item)
+                }
+            } header:{
+                Text(category.rawValue)
             }
-            Spacer()
         }
     }
 }
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuView(menu: MenuModel().menu)
     }
 }

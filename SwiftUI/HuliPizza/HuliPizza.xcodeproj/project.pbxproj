@@ -18,6 +18,10 @@
 		0ED4C4FD2A16D85200EF8AEC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4C4FC2A16D85200EF8AEC /* HeaderView.swift */; };
 		0ED4C5012A16D89000EF8AEC /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4C5002A16D89000EF8AEC /* OrderRowView.swift */; };
 		0ED4C5032A16DDE500EF8AEC /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4C5022A16DDE500EF8AEC /* RatingsView.swift */; };
+		0EF13E322A17BB6300CD283F /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF13E2E2A17BB6300CD283F /* OrderModel.swift */; };
+		0EF13E332A17BB6300CD283F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF13E2F2A17BB6300CD283F /* MenuItem.swift */; };
+		0EF13E342A17BB6300CD283F /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF13E302A17BB6300CD283F /* OrderItem.swift */; };
+		0EF13E352A17BB6300CD283F /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF13E312A17BB6300CD283F /* MenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		0ED4C4FC2A16D85200EF8AEC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0ED4C5002A16D89000EF8AEC /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
 		0ED4C5022A16DDE500EF8AEC /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		0EF13E2E2A17BB6300CD283F /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		0EF13E2F2A17BB6300CD283F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		0EF13E302A17BB6300CD283F /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
+		0EF13E312A17BB6300CD283F /* MenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			children = (
 				0E4FBD212A168ECE007C4080 /* HuliPizzaApp.swift */,
 				0ED4C4FF2A16D86A00EF8AEC /* Views */,
+				0EF13E2D2A17BB6300CD283F /* Model Code */,
 				0E4FBD252A168ECF007C4080 /* Assets.xcassets */,
 				0E4FBD272A168ECF007C4080 /* Preview Content */,
 			);
@@ -94,6 +103,17 @@
 				0ED4C5022A16DDE500EF8AEC /* RatingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0EF13E2D2A17BB6300CD283F /* Model Code */ = {
+			isa = PBXGroup;
+			children = (
+				0EF13E2E2A17BB6300CD283F /* OrderModel.swift */,
+				0EF13E2F2A17BB6300CD283F /* MenuItem.swift */,
+				0EF13E302A17BB6300CD283F /* OrderItem.swift */,
+				0EF13E312A17BB6300CD283F /* MenuModel.swift */,
+			);
+			path = "Model Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +188,15 @@
 			files = (
 				0ED4C4F52A16D6B200EF8AEC /* OrderView.swift in Sources */,
 				0ED4C4F72A16D6DF00EF8AEC /* MenuView.swift in Sources */,
+				0EF13E322A17BB6300CD283F /* OrderModel.swift in Sources */,
 				0E4FBD242A168ECE007C4080 /* ContentView.swift in Sources */,
 				0E4FBD222A168ECE007C4080 /* HuliPizzaApp.swift in Sources */,
+				0EF13E342A17BB6300CD283F /* OrderItem.swift in Sources */,
 				0ED4C5032A16DDE500EF8AEC /* RatingsView.swift in Sources */,
 				0ED4C5012A16D89000EF8AEC /* OrderRowView.swift in Sources */,
 				0ED4C4FB2A16D84500EF8AEC /* MenuRowView.swift in Sources */,
+				0EF13E352A17BB6300CD283F /* MenuModel.swift in Sources */,
+				0EF13E332A17BB6300CD283F /* MenuItem.swift in Sources */,
 				0ED4C4F92A16D83900EF8AEC /* MenuItemView.swift in Sources */,
 				0ED4C4FD2A16D85200EF8AEC /* HeaderView.swift in Sources */,
 			);
