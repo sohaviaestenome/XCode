@@ -9,11 +9,12 @@ import SwiftUI
 
 struct MenuItemView: View {
     @State private var addedItem:Bool = false
-    
+    @Binding var item:MenuItem
+    @ObservedObject var orders:OrderModel
     var body: some View {
         VStack {
             HStack {
-                Text("Margherita Huli Pizza")
+                Text(item.name)
                     .font(.title)
                     .fontWeight(.semibold)
                     .foregroundStyle(.ultraThickMaterial)
@@ -21,7 +22,7 @@ struct MenuItemView: View {
                     
                     
                 
-                if let image = UIImage(named:"0X_lg"){
+                if let image = UIImage(named:"\(item.id)_lg"){
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -40,18 +41,20 @@ struct MenuItemView: View {
             VStack(alignment: .leading) {
                
                 ScrollView {
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat ipsum nunc, non feugiat lorem auctor eu. Donec malesuada libero libero. Suspendisse luctus eleifend sem, ac malesuada nibh tempus at. Mauris erat lectus, consequat eget mi eu, elementum pharetra erat. Duis eget metus lacus. Mauris molestie pharetra ante, ac pellentesque.")
+                    Text(item.description)
                         .font(.custom("Georgia",size: 18, relativeTo: .body))
                 }
             }
             Button {
                 addedItem = true
+                orders.addOrder(item, quantity: 1)
             } label: {
                 Spacer()
-                Text(12.99, format:.currency(code:"USD")).bold()
+                Text(item.price, format:.currency(code:"USD")).bold()
                 Image(systemName: addedItem ? "cart.fill.badge.plus" : "cart.badge.plus")
                 Spacer()
             }
+            .disabled(item.id < 0)
             .padding()
             .background(.red, in: Capsule())
             .foregroundStyle(.white)
@@ -63,6 +66,7 @@ struct MenuItemView: View {
 
 struct MenuItemView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemView()
+        MenuItemView(item: .constant(testMenuItem), orders:
+        OrderModel())
     }
 }
