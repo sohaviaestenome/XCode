@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E4A0DD12A17E247001AA679 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A0DD02A17E247001AA679 /* OrderItemView.swift */; };
+		0E4EDF002A183B1200518D9A /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */; };
 		0E4FBD222A168ECE007C4080 /* HuliPizzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FBD212A168ECE007C4080 /* HuliPizzaApp.swift */; };
 		0E4FBD242A168ECE007C4080 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FBD232A168ECE007C4080 /* ContentView.swift */; };
 		0E4FBD262A168ECF007C4080 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4FBD252A168ECF007C4080 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0E4A0DD02A17E247001AA679 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
+		0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
 		0E4FBD1E2A168ECE007C4080 /* HuliPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuliPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4FBD212A168ECE007C4080 /* HuliPizzaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuliPizzaApp.swift; sourceTree = "<group>"; };
 		0E4FBD232A168ECE007C4080 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		0ED4C4FF2A16D86A00EF8AEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */,
 				0ED4C4F42A16D6B200EF8AEC /* OrderView.swift */,
 				0ED4C4F62A16D6DF00EF8AEC /* MenuView.swift */,
 				0E4FBD232A168ECE007C4080 /* ContentView.swift */,
@@ -200,6 +203,7 @@
 			files = (
 				0ED4C4F52A16D6B200EF8AEC /* OrderView.swift in Sources */,
 				0ED4C4F72A16D6DF00EF8AEC /* MenuView.swift in Sources */,
+				0E4EDF002A183B1200518D9A /* FavoriteTileView.swift in Sources */,
 				0EF13E322A17BB6300CD283F /* OrderModel.swift in Sources */,
 				0E4FBD242A168ECE007C4080 /* ContentView.swift in Sources */,
 				0E4FBD222A168ECE007C4080 /* HuliPizzaApp.swift in Sources */,
