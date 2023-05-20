@@ -10,11 +10,10 @@ import SwiftUI
 struct RatingsView: View {
     var rating:Int
     var body: some View {
-        HStack {
-            ForEach(1...rating, id:\.self) { _ in
-                Image(systemName: "fork.knife")
+        HStack{
+            ForEach(1...6,id:\.self){ circle in
+                Image(systemName: (circle <= rating) ? "fork.knife.circle.fill" : "circle")
             }
-            
         }
     }
 }
