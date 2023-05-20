@@ -96,8 +96,8 @@ struct OrderDetailView: View {
                 Button("Order"){
                     updateOrder()
                     if newOrder{
-                        orders.addOrder(orderItem:orderItem)
-                    }else{
+                        orders.addOrder(orderItem: orderItem)
+                    } else {
                         orders.replaceOrder(id: orderItem.id, with: orderItem)
                     }
                     presentSheet = false
@@ -135,7 +135,6 @@ struct OrderDetailView_Previews: PreviewProvider {
 }
 
 let noOrderItem = OrderItem(id: -1, item:noMenuItem)
-
 
 extension OrderModel{
     func replaceOrder(id:Int,with item:OrderItem){

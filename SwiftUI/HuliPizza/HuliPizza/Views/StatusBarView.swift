@@ -17,33 +17,36 @@ struct StatusBarView: View {
             Spacer()
             Button{
                 showOrders.toggle()
-            } label: {
+            } label:{
                 Image(systemName: showOrders ? "cart" : "menucard")
                     
             }
             if !showOrders {
                 Button{
                     presentGrid.toggle()
-                }label: {
+                } label:{
                     Image(systemName: presentGrid ? "square.grid.3x2" : "list.bullet")
+                        
                 }
             .padding(.leading,10)
             }
             Spacer()
             Label{
-                Text(orders.orderTotal, format: .currency(code: "USD"))
-            } icon:{
+                Text(orders.orderTotal,format: .currency(code: "USD"))
+            }icon:{
                 Image(systemName: orders.orderItems.isEmpty ? "cart" : "cart.circle.fill")
+                
             }
+        
         }
         .foregroundStyle(.white)
-        .font(.title)
+        .font(.title2)
     }
 }
 
 struct StatusBarView_Previews: PreviewProvider {
     static var previews: some View {
-        StatusBarView(showOrders: .constant(true), presentGrid: .constant(true)).environmentObject(OrderModel())
+        StatusBarView(showOrders: .constant(false), presentGrid: .constant(false)).environmentObject(OrderModel())
             .background(.black)
     }
 }

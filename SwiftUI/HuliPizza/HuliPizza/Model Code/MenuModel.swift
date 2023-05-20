@@ -1,4 +1,5 @@
 
+
 import Foundation
 
 /// An example of a static model that trickles down data through a view hierarchy, but does not change.
