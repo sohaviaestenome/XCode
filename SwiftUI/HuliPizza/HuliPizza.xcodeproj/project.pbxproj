@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E48AECB2A18CF32005AA3F9 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48AECA2A18CF32005AA3F9 /* OrderDetailView.swift */; };
 		0E4A0DD12A17E247001AA679 /* OrderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4A0DD02A17E247001AA679 /* OrderItemView.swift */; };
 		0E4EDF002A183B1200518D9A /* FavoriteTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */; };
 		0E4FBD222A168ECE007C4080 /* HuliPizzaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4FBD212A168ECE007C4080 /* HuliPizzaApp.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E48AECA2A18CF32005AA3F9 /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		0E4A0DD02A17E247001AA679 /* OrderItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemView.swift; sourceTree = "<group>"; };
 		0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTileView.swift; sourceTree = "<group>"; };
 		0E4FBD1E2A168ECE007C4080 /* HuliPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuliPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 			children = (
 				0E4EDEFF2A183B1200518D9A /* FavoriteTileView.swift */,
 				0ED4C4F42A16D6B200EF8AEC /* OrderView.swift */,
+				0E48AECA2A18CF32005AA3F9 /* OrderDetailView.swift */,
 				0ED4C4F62A16D6DF00EF8AEC /* MenuView.swift */,
 				0E4FBD232A168ECE007C4080 /* ContentView.swift */,
 				0E4A0DD02A17E247001AA679 /* OrderItemView.swift */,
@@ -216,6 +219,7 @@
 				0EF13E372A17D4A000CD283F /* StatusBarView.swift in Sources */,
 				0E9BBBD22A17FB1B000672A3 /* MenuGridView.swift in Sources */,
 				0EF13E332A17BB6300CD283F /* MenuItem.swift in Sources */,
+				0E48AECB2A18CF32005AA3F9 /* OrderDetailView.swift in Sources */,
 				0ED4C4F92A16D83900EF8AEC /* MenuItemView.swift in Sources */,
 				0E9BBBD02A17FADD000672A3 /* MenuItemTileView.swift in Sources */,
 				0ED4C4FD2A16D85200EF8AEC /* HeaderView.swift in Sources */,
